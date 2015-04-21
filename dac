@@ -37,10 +37,13 @@ theme = args.t
 src = os.path.abspath(template)
 dest = os.path.abspath(template)
 
+
 if 'base/default/' in dest:
     dest = dest.replace('base/default', package + '/' + theme)
-    
-print src 
+elif 'kl/default' in dest:
+    dest = dest.replace('kl/default', package + '/' + theme)
+
+print src
 print '=>'
 print dest
 
